@@ -1,0 +1,380 @@
+/***************************************/
+/*BELOW 75*16 1200px(smaller landscape tablets)*/
+/***************************************/
+/* 1200/16 = 84em */
+
+@media (max-width: 75em) {
+  html {
+    /* set it minus 1 from 10 to 9 */
+    /* font-size: 9px; */
+
+    /* but we should not use px */
+
+    /* 9px/16px which is 1rem default and em = 16px 0.5625% */
+    font-size: 56.25%;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 4.8rem 0 9.6rem 0;
+    max-width: 110rem;
+    align-items: center;
+    row-gap: 5rem;
+  }
+  .hero-inner {
+    margin-bottom: 5rem;
+  }
+  .primary-header {
+    color: #b3826f;
+    font-size: 4.6rem;
+  }
+
+  name .primary-header strong {
+    color: #fffefe;
+    font-weight: 600;
+  }
+
+  .secondary-header {
+    font-size: 3.6rem;
+    letter-spacing: 2rem;
+  }
+}
+
+/***************************************/
+/*BELOW 62.5*16 1000px(smaller landscape tablets)*/
+/***************************************/
+/* 61.25em x 16 = 980px */
+@media (max-width: 61.25em) {
+  .hero {
+    max-width: 95rem;
+  }
+  .container {
+    max-width: 95rem;
+  }
+
+  .section-companies {
+    padding: 3rem 3em 6.4rem 3rem;
+  }
+
+  .section-skills {
+    padding: 6.4rem 3rem;
+  }
+
+  .section-abt {
+    padding: 6.4rem 0;
+  }
+
+  .section-cta {
+    background-color: #1f1f1f;
+    padding: 6.4rem 0;
+  }
+  .cta-modal {
+    padding: 0;
+  }
+
+  .companies-img {
+    width: 80%;
+  }
+
+  .skill-cards {
+    gap: 1.2rem;
+  }
+
+  .skill-content {
+    padding: 1.2rem 2.4rem;
+  }
+}
+
+/***************************************/
+/*BELOW 56.25*16 900px(smaller landscape tablets)*/
+/***************************************/
+/* 56.25em x 16 = 900px */
+
+@media (max-width: 56.25em) {
+  html {
+    /* set it minus 1 from 10 to 9 */
+    /* font-size: 8px; */
+
+    /* but we should not use px */
+
+    /* 8px/16px which is 1rem default and em = 16px 0.50% */
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .hero-me-div {
+    /* grid-row: 1; */
+    display: flex;
+    justify-content: center;
+  }
+  /* .hero-inner img {
+    width: 60%;
+  } */
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 2rem;
+  }
+
+  .hero-input,
+  .hero-btn-cta {
+    width: 50%;
+    display: block;
+    padding: 3rem;
+  }
+
+  .hero-btn-cta {
+    font-size: 2.4rem;
+  }
+  .logo-footer-div {
+    text-align: start;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+  }
+
+  .hero-me {
+    width: 50%;
+  }
+
+  .grid-3-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-footer-div {
+    grid-row: 2;
+    grid-column: 1/-1;
+    margin-top: 2.4rem;
+
+    text-align: center;
+  }
+  .logo-footer {
+    width: 30%;
+  }
+
+  .cta-btn {
+    margin-top: 4rem;
+  }
+
+  .cta-form .msg-input {
+    height: 8rem;
+  }
+  .cta-img-box {
+    background-position: right;
+  }
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9995;
+  }
+
+  /****************nav pop up**********/
+  .main-nav {
+    background-color: #1f1f1f;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    /* z-index: 0; */
+    /* 
+    hide navigation */
+    transform: translatex(100%);
+
+    /* hide it visualy */
+    opacity: 0;
+
+    /* unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* hide from screen readers */
+    visibility: none;
+    z-index: 999;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translatex(0);
+  }
+
+  .nav-open .nav-icon[name='close-outline'] {
+    display: block;
+  }
+  .nav-open .nav-icon[name='menu-outline'] {
+    display: none;
+  }
+
+  /****************nav pop up**********/
+
+  .main-nav-list li a:link,
+  .main-nav-list li a:visited {
+    font-size: 4rem;
+  }
+
+  .cta-box {
+    grid-template-columns: 1fr;
+    border-radius: 2rem;
+    overflow: hidden;
+    /* background-color: #422d25; */
+    background-image: url(../image/about\ me/abt-me-bg.jpg);
+    background-size: cover;
+
+    gap: 2.4rem;
+    box-shadow: 0 2.4rem 4.8rem rgb(0 0 0 / 30%);
+  }
+
+  /* .cta-img-box {
+    grid-row: 1;
+    height: 60rem;
+    background-position: top;
+  } */
+
+  .outer-nav {
+    position: relative;
+  }
+
+  .abt-img {
+    width: 50%;
+  }
+
+  .div-buttons {
+    gap: 3rem;
+  }
+  .btn-projects {
+    font-size: 1.8rem;
+  }
+
+  .cta-modal {
+    padding: 0;
+  }
+}
+
+/***************************************/
+/*BELOW 31.25em*16 500px(smaller landscape tablets)*/
+/***************************************/
+/* 31.25em x 16 = 500px */
+@media (max-width: 31.25em) {
+  html {
+    /* set it minus 1 from 10 to 9 */
+    /* font-size: 7px; */
+
+    /* but we should not use px */
+
+    /* 8px/16px which is 1rem default and em = 16px 0.50% */
+    font-size: 44%;
+  }
+  .container {
+    max-width: 50rem;
+  }
+  .grid-2-cols {
+    grid-template-columns: 1fr;
+  }
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .primary-header {
+    color: #b3826f;
+    font-size: 3.6rem;
+  }
+
+  .primary-header strong {
+    color: #fffefe;
+    font-weight: 600;
+  }
+
+  .secondary-header {
+    font-size: 2.4rem;
+    letter-spacing: 2rem;
+  }
+  /* .hero-me {
+    width: 70%;
+  } */
+
+  .skill-cards {
+    gap: 3.6rem;
+  }
+
+  .skill-content {
+    padding: 4rem 4rem;
+  }
+
+  .abt-container {
+    padding: 0 3.6rem 0 3.6rem;
+  }
+
+  .logo-footer-div {
+    grid-row: 3;
+  }
+
+  .footer-grid {
+    gap: 3.6rem;
+  }
+  /* .hero-inner img {
+    width: 60%;
+  } */
+  .cta-form-box {
+    padding: 5rem 2rem 2.5rem 2.5rem;
+  }
+  .hero-btn-cta {
+    width: 50%;
+  }
+  .logo-footer-div {
+    text-align: start;
+  }
+
+  .cta-modal {
+    padding: 0;
+  }
+
+  .cta-box {
+    width: 40rem;
+    padding: 0 1rem;
+  }
+
+  .tab-content-active {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .tab-content-active p {
+    grid-row: 3;
+    grid-column: 1/-1;
+    margin-bottom: 3rem;
+  }
+
+  .tab-content-active a {
+    grid-row: 4;
+    grid-column: 1/-1;
+  }
+
+  .tab-content-project {
+    gap: 1rem;
+    grid-row: 4;
+    grid-column: 1/-1;
+    overflow: hidden;
+  }
+
+  .link-portfolio:link,
+  .link-portfolio:visited {
+    grid-row: 5;
+  }
+}
