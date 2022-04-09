@@ -264,6 +264,19 @@
   .cta-modal {
     padding: 0;
   }
+
+  .slide > img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  .popup-img {
+    width: 100%;
+  }
+
+  .popup-img img {
+    width: 90%;
+  }
 }
 
 /***************************************/

@@ -30,6 +30,7 @@ body {
   line-height: 1;
   overflow-x: hidden;
   background-color: #1f1f1f;
+  position: relative;
 }
 
 .container {
@@ -713,10 +714,97 @@ body {
   color: var(--color-primary);
 }
 
+/* VIDEO */
+.video-container {
+  flex-wrap: wrap;
+}
+
+.video-container .video {
+  height: 25rem;
+  width: 100%;
+  /* border: 0.5rem solid #fff; */
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.video-container .video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s linear;
+}
+.video-container .video video:hover {
+  transform: scale(1.07);
+}
+
+/* POP-UP-VIDEO */
+.popup-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.188);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.popup-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 80%;
+}
+
+.popup-video span {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 400;
+  z-index: inherit;
+  cursor: pointer;
+}
+
+/* END POP-UP-VIDEO */
+
+/* POP-UP-IMAGE */
+.popup-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2002;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
+  display: none;
+}
+
+.popup-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.img-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 400;
+  z-index: 2003;
+  cursor: pointer;
+}
+
 /* SLIDER */
 .slider {
   max-width: 100rem;
-  height: 50rem;
+  height: 60rem;
   margin: 0 auto;
   position: relative;
 
@@ -728,7 +816,7 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 50rem;
+  height: 60rem;
 
   display: flex;
   align-items: center;
@@ -738,12 +826,13 @@ body {
   transition: transform 1s;
 }
 
+/* Only for images that have different size than slide */
 .slide > img {
-  /* Only for images that have different size than slide */
-  width: 80%;
+  width: 100%;
   height: 80%;
   object-fit: cover;
 }
+/* Only for images that have different size than slide */
 
 .slider__btn {
   position: absolute;
@@ -751,7 +840,7 @@ body {
   z-index: 10;
 
   border: none;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.455);
   font-family: inherit;
   color: #333;
   border-radius: 50%;
@@ -759,15 +848,18 @@ body {
   width: 4rem;
   font-size: 3rem;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider__btn--left {
-  left: 10%;
+  left: 5%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: 10%;
+  right: 5%;
   transform: translate(50%, -50%);
 }
 
@@ -881,6 +973,8 @@ body {
 .cta-form .msg-input {
   height: 8rem;
   margin-bottom: 7rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .cta-btn {
@@ -1011,7 +1105,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 9997;
+  z-index: 1999;
 }
 
 /*******************

@@ -69,6 +69,7 @@ document.querySelector('.outer-nav').addEventListener('click', function (e) {
   if (e.target.classList.contains('nav-link')) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    outerNav.classList.remove('nav-open');
   }
 });
 
@@ -80,7 +81,7 @@ const sectionHeadEl = document.querySelector('.header');
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
+    // console.log(ent);
 
     if (ent.isIntersecting === false) {
       document.querySelector('.header').classList.add('sticky');
@@ -133,7 +134,6 @@ document.addEventListener('keydown', function (e) {
   // console.log(e.key);
 
   if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-    console.log('Escape was pressed');
     // modal.classList.add('hidden');
     // overlay.classList.add('hidden');
 
@@ -288,6 +288,70 @@ const slider = function () {
 };
 slider();
 
+////////////////////////////////////////////////////////////////
+////////////////VIDEO POPUP////////////////////////////////////
+const popUpVid = document.querySelector('.popup-video');
+const videoContainerVid = document.querySelectorAll('.video-container video');
+const vidCloseBtn = document.querySelector('.vid-close-btn');
+
+videoContainerVid.forEach(vid => {
+  vid.addEventListener('click', function (e) {
+    e.preventDefault();
+    popUpVid.style.display = 'block';
+    document.querySelector('.popup-video video').src = vid.getAttribute('src');
+    overlay.classList.remove('hidden');
+  });
+});
+
+const closeVid = function () {
+  popUpVid.style.display = 'none';
+  overlay.classList.add('hidden');
+};
+
+vidCloseBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  closeVid();
+});
+
+////Function overlay
+popUpVid.addEventListener('click', function () {
+  closeVid();
+});
+
+////////////////////////////////////////////////////////////////
+////////////////IMG POPUP////////////////////////////////////
+const popUpImg = document.querySelector('.popup-img');
+const imgPop = document.querySelectorAll('.imgPop');
+const imgCloseBtn = document.querySelector('.img-close-btn');
+const imgPopUp = document.querySelector('.imgPopUp');
+
+imgPop.forEach(img => {
+  img.addEventListener('click', function (e) {
+    const clicked = e.target.closest('.imgPop');
+
+    // console.log(clicked.getAttribute('src'));
+    imgPopUp.src = clicked.getAttribute('src');
+    popUpImg.style.display = 'block';
+    overlay.classList.remove('hidden');
+  });
+});
+
+const closeImg = function () {
+  popUpImg.style.display = 'none';
+  overlay.classList.add('hidden');
+};
+
+imgCloseBtn.addEventListener('click', closeImg);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeVid();
+    closeImg();
+  }
+});
+
+popUpImg.addEventListener('click', closeImg);
+
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
@@ -358,5 +422,4 @@ checkFlexGap();
     margin-right: 0;
     margin-bottom: 4.8rem;
   }
-}
-*/
+} */

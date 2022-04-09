@@ -46,14 +46,14 @@
   </head>
   <body>
     
-      <header class="header">
+      <header class="header" id="header">
     
         <div class="outer-nav  ">
           <a href="#"><img src="image/logo 2.svg" class="nav-logo" /></a>
   
           <nav class="main-nav">
             <ul class="main-nav-list">
-              <li><a class="nav-link" href="#">Home</a></li>
+              <li><a class="nav-link" href="#header">Home</a></li>
               <li><a class="nav-link" href="#abt">About Me</a></li>
               <li><a class="nav-link" href="#skills">Skills</a></li>
               <li><a class="nav-link" href="#projects">Projects</a></li>
@@ -159,8 +159,8 @@
         <div class="slide"><img src="image/s0.jpg" alt="Photo 1" /></div>
         <div class="slide"><img src="image/s1.jpg" alt="Photo 2" /></div>
         <div class="slide"><img src="image/s2.jpg" alt="Photo 3" /></div>
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <button class="slider__btn slider__btn--left"><ion-icon name="chevron-back-outline"></ion-icon></button>
+        <button class="slider__btn slider__btn--right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
         <div class="dots"></div>
       </div>
 
@@ -199,7 +199,7 @@
         <p>
           No Projects Yet
         </p>
-        <a href="#" class="link-portfolio">CLICK HERE TO CHECK WEBSITE PROJECTS</a>
+        <a href="#" class="link-portfolio">CLICK HERE TO SEE MORE</a>
       </div>
 
       <div class="tab-content-2 tab-content tab-content-active">
@@ -211,28 +211,32 @@
           Preview graphic design projects. please click the link below to see more..
         </p>
         <div class="tab-content-project grid grid-3-cols">
-          <img src="image/graphics/1.jpg" alt="Sample Graphic design">
-          <img src="image/graphics/2.jpg" alt="Sample Graphic design">
-          <img src="image/graphics/3.jpg" alt="Sample Graphic design">
+          <img class="imgPop" src="image/graphics/1.jpg" alt="Sample Graphic design">
+          <img class="imgPop" src="image/graphics/2.jpg" alt="Sample Graphic design">
+          <img class="imgPop" src="image/graphics/3.jpg" alt="Sample Graphic design">
 
          
         </div>
         <a href="https://drive.google.com/drive/folders/1idw6QbarxG3R_Y4IzWsuZrGDfYrwa3zI?usp=sharing" target="_blank" class="link-portfolio">
-          CLICK HERE TO CHECK GRAPHIC DESIGN PROJECTS
+          CLICK HERE TO SEE MORE
         </a>
       </div>
       <div class="tab-content-3 tab-content">
         <ion-icon class="project-icons" name="videocam-outline"></ion-icon>
         <h5 class="projects-tab-header">
-         VIDEO EDITING
+          CLICK HERE TO SEE MORE
         </h5>
         <p>
           Preview video editing projects. please click the link below to see more..
         </p>
-        <div class="tab-content-project grid grid-3-cols">
-          <img src="image/video/1.jpg" alt="Sample Graphic design">
+        <div class="tab-content-project video-container grid grid-3-cols">
+          <!-- <img src="image/video/1.jpg" alt="Sample Graphic design">
           <img src="image/video/2.jpg" alt="Sample Graphic design">
-          <img src="image/video/3.jpg" alt="Sample Graphic design">
+          <img src="image/video/3.jpg" alt="Sample Graphic design"> -->
+          <div class="video"><video src="vids/v1.mp4" muted></video></div>
+          <div class="video"><video src="vids/v2.mp4" muted></video></div>
+          <div class="video"><video src="vids/v3.mp4" muted></video></div>
+   
 
         </div>
         <a href="https://drive.google.com/drive/folders/1Lf65O4B_pTdyw8sDUsd6smG9uGYCrsoU?usp=sharing" target="_blank" class="link-portfolio">CLICK HERE TO CHECK VIDEO EDITING PROJECTS</a>
@@ -243,7 +247,19 @@
 
 
     </section>
+    
+    <div class="popup-video">
+      <span class="vid-close-btn">&times;</span>
+      <video src="" muted autoplay controls></video>
+    </div>
 
+    <div class="container">>
+    <div class="popup-img">
+      <div class="img-pop-div">
+        <span class="img-close-btn">&times;</span>
+     <img class="imgPopUp" src="" alt=""></div>
+    </div>
+  </div>
 
 
 
