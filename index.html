@@ -155,11 +155,18 @@
       <div class="abt-header section-header">
         <h3 class="secondary-header">About Me</h3>
       </div>
-      <div class="abt-container container grid grid-2-cols">
-        <img class="abt-img" src="image/m47.jpg" alt="" />
+      <div class="slider">
+        <div class="slide"><img src="image/s0.jpg" alt="Photo 1" /></div>
+        <div class="slide"><img src="image/s1.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="image/s2.jpg" alt="Photo 3" /></div>
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots"></div>
+      </div>
 
-        <div class="abt-info">
-          <p class="abt-head2">BACKGROUND</p>
+   
+
+        <div class="abt-container container abt-info">
           <p class="abt-text">
             My name is <strong>MEYNARD OLICIA</strong>, a Graphic Designer living in Pangasinan, Philippines. I like to make cool and creative designs,
             regardless of what medium. I love coding and design. and I feel when you know both it is a powerful thing.
@@ -171,16 +178,8 @@
             </p>
         </div>
       </div>
-    </section>
-    <section class="section section-slides" id="slides">
-      <div class="slider">
-      <div class="slide"><img src="image/s0.jpg" alt="Photo 1" /></div>
-      <div class="slide"><img src="image/s1.jpg" alt="Photo 2" /></div>
-      <div class="slide"><img src="image/s2.jpg" alt="Photo 3" /></div>
-      <button class="slider__btn slider__btn--left">&larr;</button>
-      <button class="slider__btn slider__btn--right">&rarr;</button>
-      <div class="dots"></div>
-    </div>
+
+     
    </section>
   
     <section class="section section-projects" id="projects">
@@ -262,11 +261,12 @@
           <p class="cta-title">Let's Talk</p>
           <p class="cta-text">Please fill this form</p>
 
-          <form method="POST" class="cta-form" name="submit-form" netlify>
+          <form method="POST" class="cta-form" name="submit-form" id="contactForm">
+            <div class="alert">Your message has been sent!</div>
             <div>
-              <label id="name" class="Name" for="text">Name</label><br />
+              <label class="Name" for="text">Name</label><br />
               <input
-                id="from_name"
+                id="name"
                 type="name"
                 placeholder="Yourname"
                 name="full-name"
@@ -275,9 +275,9 @@
             </div>
 
             <div>
-              <label  class="Email" for="email">Email</label><br />
+              <label  id="email" class="email" for="email">Email</label><br />
               <input
-                id="email"
+                id="emailid"
                 type="email"
                 placeholder="Name@youremail.com"
                 name="email"
@@ -354,7 +354,7 @@
       </div>
     </footer>
 
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script src="js/mail.js"></script>
   </body>
 </html>

@@ -570,19 +570,10 @@ body {
   border-bottom: 3px solid #fff3ef73;
 }
 
-.abt-img {
-  width: 60%;
-  filter: grayscale(40%);
-  justify-self: center;
-  filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.185));
-  transition: all 0.4s ease;
-  border-top-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+.abt-info {
+  padding: 2rem 2rem;
 }
 
-.abt-img:hover {
-  filter: drop-shadow(0 16px 4px rgba(0, 0, 0, 0.315));
-}
 .abt-head2,
 .abt-text {
   color: var(--color-secondary);
@@ -849,7 +840,7 @@ body {
 .cta-text {
   font-size: 2rem;
   color: var(--color-primary);
-  margin-bottom: 8rem;
+  margin-bottom: 3rem;
   letter-spacing: 6px;
 }
 .cta-form-box {
@@ -944,6 +935,16 @@ body {
   font-weight: 600;
   top: 4rem;
   left: -8rem;
+}
+
+.alert {
+  background-color: var(--color-primary-darker);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 20rem;
+  text-align: center;
+  display: none;
 }
 
 /* ///////////////////modal//////////////////////// */
