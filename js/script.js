@@ -306,6 +306,7 @@ videoContainerVid.forEach(vid => {
 const closeVid = function () {
   popUpVid.style.display = 'none';
   overlay.classList.add('hidden');
+  document.querySelector('.popup-video video').src = '';
 };
 
 vidCloseBtn.addEventListener('click', function (e) {
