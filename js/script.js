@@ -288,17 +288,50 @@ const slider = function () {
 };
 slider();
 
+// ////////////////////////////////////////////////////////////////
+// ////////////////VIDEO POPUP////////////////////////////////////
+// const popUpVid = document.querySelector('.popup-video');
+// const videoContainerVid = document.querySelectorAll('.video-container video');
+// const vidCloseBtn = document.querySelector('.vid-close-btn');
+
+// videoContainerVid.forEach(vid => {
+//   vid.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     popUpVid.style.display = 'block';
+//     document.querySelector('.popup-video video').src = vid.getAttribute('src');
+//     overlay.classList.remove('hidden');
+//   });
+// });
+
+// const closeVid = function () {
+//   popUpVid.style.display = 'none';
+//   overlay.classList.add('hidden');
+//   document.querySelector('.popup-video video').src = '';
+// };
+
+// vidCloseBtn.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   closeVid();
+// });
+
+// ////Function overlay
+// popUpVid.addEventListener('click', function () {
+//   closeVid();
+// });
+
 ////////////////////////////////////////////////////////////////
 ////////////////VIDEO POPUP////////////////////////////////////
 const popUpVid = document.querySelector('.popup-video');
-const videoContainerVid = document.querySelectorAll('.video-container video');
+const thumb = document.querySelectorAll('.thumb');
 const vidCloseBtn = document.querySelector('.vid-close-btn');
 
-videoContainerVid.forEach(vid => {
+thumb.forEach(vid => {
   vid.addEventListener('click', function (e) {
-    e.preventDefault();
+    const clicked = e.target.closest('.thumb');
+    // console.log('click');
+    // console.log(clicked.dataset.src);
     popUpVid.style.display = 'block';
-    document.querySelector('.popup-video video').src = vid.getAttribute('src');
+    document.querySelector('.popup-video video').src = clicked.dataset.src;
     overlay.classList.remove('hidden');
   });
 });
