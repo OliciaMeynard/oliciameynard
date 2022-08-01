@@ -85,6 +85,10 @@
   .skill-content {
     padding: 1.2rem 2.4rem;
   }
+
+  .img-link img {
+    width: 90%;
+  }
 }
 
 /***************************************/

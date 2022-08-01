@@ -385,6 +385,43 @@ document.addEventListener('keydown', function (e) {
 });
 
 popUpImg.addEventListener('click', closeImg);
+////////////////////////////////////////////////////////////////
+////////////////WEB POPUP////////////////////////////////////
+const popupWeb = document.querySelector('.popup-web');
+const webPop = document.querySelectorAll('.webPop');
+const webCloseBtn = document.querySelector('.web-close-btn');
+const webpopImg = document.querySelector('.web-pop');
+const popLink = document.querySelector('.pop-link');
+
+webPop.forEach(img => {
+  img.addEventListener('click', function (e) {
+    const clicked = e.target.closest('.webPop');
+
+    // console.log(clicked.getAttribute('src'));
+    webpopImg.src = clicked.getAttribute('src');
+    popLink.href = clicked.dataset.webhref;
+    // data-web-src
+    popupWeb.style.display = 'block';
+    overlay.classList.remove('hidden');
+  });
+});
+
+const closeWeb = function () {
+  popupWeb.style.display = 'none';
+  overlay.classList.add('hidden');
+};
+
+webCloseBtn.addEventListener('click', closeWeb);
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    closeVid();
+    closeWeb();
+    closeImg();
+  }
+});
+
+popupWeb.addEventListener('click', closeWeb);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions

@@ -137,11 +137,11 @@
           <div class="skill-card skill-card3">
             <img class="skill-img" src="image/skills/graphic.png" />
             <div class="skill-content">
-              <p class="skill-name">Graphic Design</p>
+              <p class="skill-name">Graphic Design / 3D Artist</p>
               <p class="skill-text">
                 I've been doing Graphic Design since August 2012. I am an expert
                 Graphic designer. I know print layouts, banners, packaging
-                designs. social media posters, movie posters, photo
+                designs. social media posters, 3d illustrations, movie posters, photo
                 manipulations, logo design, vector graphics and many more.
               </p>
             </div>
@@ -159,6 +159,8 @@
         <div class="slide"><img src="image/s0.jpg" alt="Photo 1" /></div>
         <div class="slide"><img src="image/s1.jpg" alt="Photo 2" /></div>
         <div class="slide"><img src="image/s2.jpg" alt="Photo 3" /></div>
+        <div class="slide"><img src="image/s3.jpg" alt="Photo 4" /></div>
+        <div class="slide"><img src="image/s4.jpg" alt="Photo 5" /></div>
         <button class="slider__btn slider__btn--left"><ion-icon name="chevron-back-outline"></ion-icon></button>
         <button class="slider__btn slider__btn--right"><ion-icon name="chevron-forward-outline"></ion-icon></button>
         <div class="dots"></div>
@@ -187,8 +189,8 @@
       <div class="container div-projects">
         <div class="div-buttons">
           <button class="btn-projects-tab-1 btn-projects  "   data-tab="1">Web Designs</button>
-          <button class="btn-projects btn-projects-tab-2 btn-projects-active"   data-tab="2">Graphic Designs</button>
-          <button class="btn-projects btn-projects-tab-3"   data-tab="3">Video Editings</button>
+          <button class="btn-projects btn-projects-tab-2 "   data-tab="2">Graphic Designs</button>
+          <button class="btn-projects btn-projects-tab-3 btn-projects-active"   data-tab="3">Video Editings</button>
         </div>
 
         <div class="tab-content-1 tab-content ">
@@ -196,20 +198,18 @@
         <h5 class="projects-tab-header">
          WEB DESIGNS
         </h5>
-        <p>
-          No Projects Yet
-        </p>
-        <a href="#" class="link-portfolio">CLICK HERE TO SEE MORE</a>
+        <div class="tab-content-project grid grid-3-cols">
+        
+       <img  class="webPop" src="image/web/1.jpg" alt="Sample web design" data-webhref="https://oliciameynard.github.io/prestigewebsite/">
+      </div>
       </div>
 
-      <div class="tab-content-2 tab-content tab-content-active">
+      <div class="tab-content-2 tab-content ">
         <ion-icon class="project-icons" name="brush-outline"></ion-icon>
         <h5 class="projects-tab-header">
          GRAPHIC DESIGNS
         </h5>
-        <p>
-          Preview graphic design projects. please click the link below to see more..
-        </p>
+  
         <div class="tab-content-project grid grid-3-cols">
           <img class="imgPop" src="image/graphics/1.jpg" alt="Sample Graphic design">
           <img class="imgPop" src="image/graphics/2.jpg" alt="Sample Graphic design">
@@ -221,14 +221,12 @@
           CLICK HERE TO SEE MORE
         </a>
       </div>
-      <div class="tab-content-3 tab-content">
+      <div class="tab-content-3 tab-content tab-content-active">
         <ion-icon class="project-icons" name="videocam-outline"></ion-icon>
         <h5 class="projects-tab-header">
           VIDEOS
         </h5>
-        <p>
-          Video tab. please click the link below to see more..
-        </p>
+
         <div class="tab-content-project video-container grid grid-3-cols">
           <!-- <img src="image/video/1.jpg" alt="Sample Graphic design">
           <img src="image/video/2.jpg" alt="Sample Graphic design">
@@ -236,6 +234,8 @@
           <div class="video"><img class="thumb" src="image/video/1.jpg" alt="Video thumb" data-src="vids/v1.mp4"></div>
           <div class="video"><img class="thumb" src="image/video/2.jpg" alt="Video thumb" data-src="vids/v2.mp4"></div>
           <div class="video"><img class="thumb" src="image/video/3.jpg" alt="Video thumb" data-src="vids/v3.mp4"></div>
+          <div class="video"><img class="thumb" src="image/video/4.jpg" alt="Video thumb" data-src="vids/v4.mp4"></div>
+          <div class="video"><img class="thumb" src="image/video/5.jpg" alt="Video thumb" data-src="vids/v5.mp4"></div>
           <!-- <div class="video"><video src="vids/v1.mp4" muted></video></div>
            <div class="video"><video src="vids/v2.mp4" muted></video></div>
           <div class="video"><video src="vids/v3.mp4" muted></video></div>
@@ -250,13 +250,25 @@
 
 
     </section>
+
+    <div class="container-web">
+      <div class="popup-web">
+        <div class="web-pop-div">
+          <span class="web-close-btn">&times;</span>
+          <div class="img-link">
+       <img class="web-pop" src="" alt="">
+       <a href="" class="pop-link" target="_blank">Click this link to See live page</a>
+      </div>
+      </div>
+      </div>
+    </div>
     
     <div class="popup-video">
       <span class="vid-close-btn">&times;</span>
       <video src="" muted autoplay controls></video>
     </div>
 
-    <div class="container">>
+    <div class="container">
     <div class="popup-img">
       <div class="img-pop-div">
         <span class="img-close-btn">&times;</span>
@@ -279,6 +291,7 @@
          
           <p class="cta-title">Let's Talk</p>
           <p class="cta-text">Please fill this form</p>
+
 
           <form method="POST" class="cta-form" name="submit-form" id="contactForm">
             <div class="alert">Your message has been sent!</div>
