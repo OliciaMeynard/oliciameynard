@@ -803,6 +803,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.pop-link {
+  margin-top: 2rem;
+}
+
 .img-close-btn,
 .web-close-btn {
   position: absolute;
