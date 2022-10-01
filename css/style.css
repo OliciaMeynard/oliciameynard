@@ -408,7 +408,7 @@ body {
   animation-fill-mode: backwards;
 }
 .hero-me {
-  width: 55%;
+  width: 70%;
 
   /* filter: drop-shadow(0 2rem 4px rgba(0, 0, 0, 0.634)); */
   transition: all 1s ease;
