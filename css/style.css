@@ -804,7 +804,11 @@ body {
 }
 
 .pop-link {
-  margin-top: 3rem;
+    position: absolute;
+    background: var(--color-dark);
+    padding: 1rem;
+    top: 2rem;
+    border-radius: 2rem;
 }
 
 .img-close-btn,
