@@ -281,18 +281,14 @@ body {
   align-items: center;
 }
 
-.hero-inner img:hover {
-  /* filter: drop-shadow(0 2rem 4px rgba(0, 0, 0, 0.634)); */
-  transform: scale(1.08);
-  transform: rotate(15deg);
-}
+
 
 .hero-me-div {
   text-align: center;
 }
 
 .hero-img-div {
-  background-image: url(../image/circ.png);
+  /* background-image: url(../image/circ.png); */
   background-position: center;
   background-size: cover;
   /* content: ""; */
@@ -301,9 +297,11 @@ body {
   width: 30rem;
   margin: 0 auto;
   position: relative;
-  opacity: 50%;
+  opacity: 100%;
   animation: slidetotop 3s ease-out 1.5s;
   animation-fill-mode: backwards;
+  /* border: 2px solid white; */
+  /* border-radius: 500px; */
 }
 
 .circle {
@@ -313,10 +311,17 @@ body {
   top: -5px;
   left: -5px;
   z-index: 50;
+  opacity: 50%;
 
   -webkit-animation: spin 10s linear infinite;
   -moz-animation: spin 10s linear infinite;
   animation: spin 10s linear infinite;
+}
+.sign-logo{
+  width: 100%;
+  position: absolute;
+  top: 35%;
+  transform: Scale(1.5, 1.5);
 }
 @-moz-keyframes spin {
   100% {
@@ -612,7 +617,7 @@ body {
 .div-buttons {
   margin: 8rem 3rem 0 0;
   display: flex;
-  gap: 5rem;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -626,7 +631,7 @@ body {
   cursor: pointer;
   text-transform: uppercase;
   width: 20rem;
-  border-radius: 20rem;
+  /* border-radius: 20rem; */
   transform: translateY(-50%);
   font-weight: 600;
 }
@@ -637,7 +642,7 @@ body {
 }
 
 .btn-projects-active {
-  transform: translateY(-70%);
+  /* transform: translateY(-70%); */
   background-color: var(--color-secondary);
   color: var(--color-primary);
 }
@@ -804,10 +809,12 @@ body {
 }
 
 .pop-link {
+
+  bottom: 40px;
     position: absolute;
     background: var(--color-dark);
     padding: 1rem;
-    top: 2rem;
+    /* top: 2rem; */
     border-radius: 2rem;
 }
 
@@ -858,13 +865,13 @@ body {
 .pop-link:link,
 .pop-link:visited {
   color: white;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 .pop-link:hover,
 .pop-link:active {
   color: var(--color-primary);
-  font-size: 3rem;
+
   text-decoration: none;
 }
 
@@ -896,7 +903,7 @@ body {
 /* Only for images that have different size than slide */
 .slide > img {
   width: 100%;
-  height: 80%;
+  height: 550px;
   object-fit: cover;
 }
 /* Only for images that have different size than slide */
@@ -1108,6 +1115,14 @@ body {
   display: none;
 }
 
+
+/*************** IMAGES *******************/
+.webPop, .imgPop, .thumb{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
 /* ///////////////////modal//////////////////////// */
 
 .cta-box {
@@ -1189,7 +1204,7 @@ aside {
   text-decoration: none;
   font-size: 2rem;
   background-color: none;
-  border-radius: 10rem;
+  /* border-radius: 10rem; */
   padding: 1rem 2rem;
   display: inline-block;
   padding: 1rem 2rem;
