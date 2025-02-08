@@ -313,9 +313,9 @@ body {
   z-index: 50;
   opacity: 50%;
 
-  -webkit-animation: spin 10s linear infinite;
-  -moz-animation: spin 10s linear infinite;
-  animation: spin 10s linear infinite;
+  -webkit-animation: spin 20s linear infinite;
+  -moz-animation: spin 20s linear infinite;
+  animation: spin 20s linear infinite;
 }
 .sign-logo{
   width: 100%;
@@ -548,6 +548,14 @@ body {
   font-weight: 400;
   margin-top: 1rem;
   color: var(--color-secondary);
+}
+.skill-list{
+  line-height: 1.4;
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 1rem;
+  color: var(--color-secondary);
+  padding-left: 10px;
 }
 
 /*******************
@@ -801,9 +809,12 @@ body {
 
 .popup-img img,
 .img-link {
+  /* max-width: 800px; */
+  max-height: 850px;
   position: absolute;
   top: 50%;
   left: 50%;
+  overflow: scroll;
 
   transform: translate(-50%, -50%);
 }
@@ -877,8 +888,8 @@ body {
 
 /* SLIDER */
 .slider {
-  max-width: 100rem;
-  height: 60rem;
+  max-width: 110rem;
+  height: 65rem;
   margin: 0 auto;
   position: relative;
 
