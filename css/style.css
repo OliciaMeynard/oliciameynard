@@ -488,10 +488,11 @@ body {
   font-size: 1.6rem;
   color: var(--color-secondary);
   /* text-transform: uppercase; */
-  letter-spacing: 4px;
+  /* letter-spacing: 4px; */
   margin-top: 1.6rem;
   text-align: center;
   line-height: 1.5;
+  margin: 0 50px;
 }
 
 /*******************

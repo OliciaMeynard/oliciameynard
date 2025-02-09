@@ -40,6 +40,10 @@
     font-size: 3.6rem;
     letter-spacing: 2rem;
   }
+  .hero-inner .blurb-text {
+
+    margin: 0 30px;
+  }
 }
 
 /***************************************/
