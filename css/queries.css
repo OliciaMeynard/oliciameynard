@@ -285,7 +285,13 @@
   .popup-img img {
     width: 90%;
   }
+  .hero-inner {
+
+    margin-top: -100px;
+  }
+
 }
+
 
 /***************************************/
 /*BELOW 31.25em*16 500px(smaller landscape tablets)*/
